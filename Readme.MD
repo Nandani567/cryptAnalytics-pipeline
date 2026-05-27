@@ -97,31 +97,6 @@ docker ps
 # xxxxxxxxxxxx   postgres:16   Up X seconds  0.0.0.0:5432->5432/tcp   crypto-postgres
 ```
 
-The `docker-compose.yml`:
-
-```yaml
-version: "3.9"
-
-services:
-  postgres:
-    image: postgres:16
-    container_name: crypto-postgres
-    restart: always
-    env_file:
-      - .env
-    environment:
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
-      POSTGRES_DB: ${DB_NAME}
-    ports:
-      - "${DB_PORT}:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-
-volumes:
-  postgres_data:
-```
-
 ### 4. Install dependencies
 
 ```bash
