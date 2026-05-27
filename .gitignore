@@ -1,0 +1,32 @@
+.env
+# Create .gitignore
+cat > .gitignore << 'EOF'
+# Environment — NEVER commit real credentials
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# PostgreSQL
+*.sql.bak
+
+# Power BI temp files
+*.pbix.bak
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.iml
+EOF
